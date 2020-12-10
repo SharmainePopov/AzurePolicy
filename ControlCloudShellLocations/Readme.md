@@ -1,7 +1,7 @@
 #### Date : December 8 2020 ####
 #### Notice : These are samples only with no guarantees. Please validate in your own environment before use. 
 #### Format : I provide each policy sample as a simple text file, ready to be copied as is and inserted into the portal Policy Definition window. I like things simple. ####
-#### Status : All info relating to Azure Cloud Shell and to Azure Policy is what is publicly available as of December 8 2020. If Cloud Shell configuration changes with subsequent Cloud Shell relases, these policies may need to be updated to remain useful. Same deal if there are changes to the way Azure Policy implemented by Azure. There is no specific intent to maintain these samples. ####
+#### Status : All info relating to Azure Cloud Shell and to Azure Policy is what is publicly available as of December 8 2020. If Cloud Shell configuration changes with subsequent Cloud Shell relases, these policies may need to be updated to remain useful. Same deal if there are changes to the way Azure Policy itself is implemented. There is no specific intent to maintain these samples. ####
 
 Overview
 ---------
