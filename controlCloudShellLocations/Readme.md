@@ -5,7 +5,7 @@
 Overview
 ---------
 These policies might be able to control the deployment of Cloud Shell resources, to prevent creation outside of Allowed Locations. 
-The oud Shell environment set up creates a new Resource Group, Storage Account, and  Azure Fileshare, or allow a user to select pre-existing for use. These policies affect creation of NEW Resource Groups and Storage Accounts, and by association, Fileshares.
+The Cloud Shell environment set up process either creates a new Resource Group, Storage Account, and  Azure Fileshare, or allow a user to select pre-existing for use. These policies pertain to creation of NEW Resource Groups and Storage Accounts, and by association, Fileshares, only. They will not impact existing Cloud Shell environments.
 
 In the write up below, DEFAULT Cloud Shell resources are what is created automatically when a user simply clicks the "Create Storage" button in the Cloud Shell interface. CUSTOM resources are what are created by clicking "Advanced Settings" and making choices. 
 
@@ -24,7 +24,7 @@ b)Cloud Shell CUSTOM setup allow creation of a Resource Group outside Allowed Lo
 c)Cloud Shell will allow the the environment setup to proceed without error only if the Resource Group and Storage Account are in the Allowed Locations.
 
 Policy : Deny Creation of Default Cloud Shell Resource Group Outside of Allowed Locations
-------------------------------------------------------------------------------------------
+=========================================================================================
 
 What It Will Do :
 ----------------
@@ -44,14 +44,8 @@ What Else It Won't Do:
 This Policy will not impact any EXISTING reourses, Cloud Shell or otherwise,  or limit a user's ability to access EXISTNG resource for Cloud Shell use.
 So a user can successfully select an EXISTING Resource Group, Storage Account and Fileshare during a CUSTOM set up of Cloud Shell, even those outside of Allowed Locatiosn. A user can also continue to use EXISTING DEFAULT Cloud Shell resources, even those outside of Allowed Locations.
 
-
-Other Info:
-Here is a link to current (December 8 2020) docs on Cloud Shell that explain what is set up by the DEFAULT configuration https://docs.microsoft.com/en-us/azure/cloud-shell/persisting-shell-storage#create-new-storage 
-Here is a link to current (December 9 2020) docs on Cloud Shell that explain what is set up by the CUSTOM configuration 
-
 Policy : Deny Creation of Default Cloud Shell Storage Accounts Outside of Allowed Locations
--------------------------------------------------------------------------------------------
--------------------------------------------------------------------------------------------
+===========================================================================================
 
 What It Will Do
 ---------------
