@@ -20,8 +20,8 @@ Summary
 ---------
 If you apply both policies at the subscriptions scope, then   
 a)Cloud Shell DEFAULT setup will not create any  Resource Groups or Storage Accounts outside of Allowed Locations. If the location chosesn by Cloud Shell during the default set up is outside of your Allowed Locations, the user will get an error.
-b)Cloud Shell CUSTOM setup allow creation of a Resource Group outside Allowed Locations, but creation of the associated Storage Account will fail. The user will get an error. There will be empty Resource Groups that will need to be identified and removed if necessary, and that cleanup is outside the scope of these Policies. 
-c)Cloud Shell will allow the the environment setup to proceed without error only if the Resource Group and Storage Account are in the Allowed Locations.
+b)Cloud Shell CUSTOM setup allows creation of a Resource Group outside Allowed Locations, but creation of the associated Storage Account will fail. The user will get an error. There will be empty Resource Groups that will need to be identified and removed if necessary, and that cleanup is outside the scope of these Policies. 
+c)Cloud Shell will allow the the environment setup to proceed without error only if a)the NEW Resource Group and Storage Account are in the Allowed Locations or b)the user selects existing Resource Group and that existing Resource
 
 Policy : Deny Creation of Default Cloud Shell Resource Group Outside of Allowed Locations
 =========================================================================================
