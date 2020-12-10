@@ -6,6 +6,7 @@
 Overview
 ---------
 These policies might be able to control the deployment of Cloud Shell resources, to prevent creation outside of Allowed Locations. 
+Useful in cases where clients want to maintain a subscription wide AUDIT policy for Resource Group Allowed Locations, but want tighter control over Cloud Shell specifically.
 The Cloud Shell environment set-up process will either create a new Resource Group, Storage Account, and  Azure Fileshare, or allow a user to select pre-existing for use. These policies pertain to creation of NEW Resource Groups and Storage Accounts, and by association, Fileshares, only. They will not impact existing Cloud Shell environments. They will not prevent a user from choosing to use any existing Resource Groups, even Resource Groups outside of Allowed Locations
 
 In the write up below, DEFAULT Cloud Shell resources are what is created automatically when a user simply clicks the "Create Storage" button in the Cloud Shell interface. CUSTOM resources are what are created by clicking "Advanced Settings" and making choices. 
