@@ -1,4 +1,4 @@
-### Date : ### December 8 2020 
+#### Date : December 8 2020 ####
 ### Notice : These are samples only with no guarantees. Please validate in your own environment before use. ###
 ### Status : All info relating to Cloud Shell is what is pubicly available as of December 8 2020. If Cloud Shell configuration changes with subsequent Cloud Shell relases, these policies may need to be updated to remain useful. There is no specific intent to maintain these samples. ###
 
