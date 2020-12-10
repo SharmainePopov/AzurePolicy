@@ -1,0 +1,65 @@
+{
+ "properties": {
+  "displayName": "Deny Creation of Cloud Shell Storage Account Resources  Outside of Allowed Locations",
+  "policyType": "Custom",
+  "mode": "Indexed",
+  "description": "DENY creation of NEW Cloud Shell Storage Accounts  outside of allowed locations.\nUse this Policy to prevent the creation of CUSTOM Cloud Shell Storage Accounts  outside of Allowed Locations.\nThere is no way to specifically prevent the creation fo CUSTOM Cloud Shell Resource Groups outside of Allowed Locations. \nTo prevent the creation of DEFAULT Cloud Shell Storage Accounts/Resource Groups  outside of Allowed Locatons use \"Deny Creation of Default Cloud Shell  Resource Groups  Outside of Allowed Locations\" ",
+  "metadata": {
+   "category": "Cloud Shell",
+   "createdBy": "234928bf-ebad-4a8f-bff1-99b084a1dfab",
+   "createdOn": "2020-12-09T20:26:57.1731192Z",
+   "updatedBy": null,
+   "updatedOn": null
+  },
+  "parameters": {
+   "listOfAllowedLocations": {
+    "type": "Array",
+    "metadata": {
+     "displayName": "Allowed locations",
+     "description": "The list of locations that resource groups can be created in.",
+     "strongType": "location"
+    }
+   },
+   "inclusionTagName": {
+    "type": "String",
+    "metadata": {
+     "displayName": "Inclusion Tag Name",
+     "description": "Name of the tag to use to DENY resource creation. The default value is for cloud shell resources."
+    },
+    "defaultValue": "ms-resource-usage"
+   },
+   "inclusionTagValue": {
+    "type": "String",
+    "metadata": {
+     "displayName": "Inclusion Tag Values",
+     "description": "Value of the tag to use for DENY resource creation. The default value is the default tag for cloud shell resources."
+    },
+    "defaultValue": "azure-cloud-shell"
+   }
+  },
+  "policyRule": {
+   "if": {
+    "allOf": [
+     {
+      "field": "type",
+      "equals": "Microsoft.Storage/storageAccounts"
+     },
+     {
+      "field": "location",
+      "notIn": "[parameters('listOfAllowedLocations')]"
+     },
+     {
+      "field": "[concat('tags[', parameters('inclusionTagName'), ']')]",
+      "equals": "[parameters('inclusionTagValue')]"
+     }
+    ]
+   },
+   "then": {
+    "effect": "deny"
+   }
+  }
+ },
+ "id": "/subscriptions/5cdbfcaf-435b-4ef9-96e2-b7c24fa1c180/providers/Microsoft.Authorization/policyDefinitions/729d3579-2bb6-40f2-bc45-669b9d136e56",
+ "type": "Microsoft.Authorization/policyDefinitions",
+ "name": "729d3579-2bb6-40f2-bc45-669b9d136e56"
+}
