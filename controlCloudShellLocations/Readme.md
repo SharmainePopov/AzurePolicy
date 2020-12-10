@@ -1,11 +1,11 @@
 #### Date : December 8 2020 ####
 #### Notice : These are samples only with no guarantees. Please validate in your own environment before use. ####
-#### Status : All info relating to Cloud Shell is what is publicly available as of December 8 2020. If Cloud Shell configuration changes with subsequent Cloud Shell relases, these policies may need to be updated to remain useful. There is no specific intent to maintain these samples. ####
+#### Status : All info relating to Azure Cloud Shell and to Azure Policy is what is publicly available as of December 8 2020. If Cloud Shell configuration changes with subsequent Cloud Shell relases, these policies may need to be updated to remain useful. Same deal if there are changes to the way Azure Policy implemented by Azure. There is no specific intent to maintain these samples. ####
 
 Overview
 ---------
 These policies might be able to control the deployment of Cloud Shell resources, to prevent creation outside of Allowed Locations. 
-The Cloud Shell environment set up process either creates a new Resource Group, Storage Account, and  Azure Fileshare, or allow a user to select pre-existing for use. These policies pertain to creation of NEW Resource Groups and Storage Accounts, and by association, Fileshares, only. They will not impact existing Cloud Shell environments.
+The Cloud Shell environment set up process either creates a new Resource Group, Storage Account, and  Azure Fileshare, or allow a user to select pre-existing for use. These policies pertain to creation of NEW Resource Groups and Storage Accounts, and by association, Fileshares, only. They will not impact existing Cloud Shell environments. They will not prevent a user from choosing to use any existing Resource Groups, even Resource Groups outside of Allowed Locations
 
 In the write up below, DEFAULT Cloud Shell resources are what is created automatically when a user simply clicks the "Create Storage" button in the Cloud Shell interface. CUSTOM resources are what are created by clicking "Advanced Settings" and making choices. 
 
